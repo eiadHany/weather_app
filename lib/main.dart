@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:weather/core/utils/app_colors.dart';
 
 import 'package:weather/core/utils/app_routes.dart';
 
@@ -16,6 +17,8 @@ class Weather extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      theme:
+          ThemeData(scaffoldBackgroundColor: AppColors.scaffoldBackGroundColor),
       debugShowCheckedModeBanner: false,
       routerConfig: AppRoutes.router,
     );

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 abstract class AppTexStyle {
-  static const textStyleKawa64 = TextStyle(
+  static const textStyleKawa30 = TextStyle(
     fontFamily: 'Poppins',
-    fontSize: 64,
+    fontSize: 30,
     fontWeight: FontWeight.bold,
     color: Colors.white,
   );

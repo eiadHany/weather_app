@@ -20,21 +20,24 @@ class OnBoardingViewBody extends StatelessWidget {
           end: Alignment.bottomCenter,
         ),
       ),
-      child: Column(
+      child: ListView(
+        physics: const BouncingScrollPhysics(),
         children: [
           const SizedBox(
             height: 10,
           ),
           Image.asset(AppAssets.weatherIcon),
-          const Text(
+          Text(
             'Weather',
-            style: AppTexStyle.textStyleKawa64,
+            style: AppTexStyle.textStyleKawa30.copyWith(fontSize: 64),
             textAlign: TextAlign.center,
           ),
           Text(
             'ForeCasts',
-            style: AppTexStyle.textStyleKawa64.copyWith(
-                color: AppColors.startedButton, fontWeight: FontWeight.w500),
+            style: AppTexStyle.textStyleKawa30.copyWith(
+                color: AppColors.startedButton,
+                fontWeight: FontWeight.w500,
+                fontSize: 64),
             textAlign: TextAlign.center,
           ),
           const SizedBox(
