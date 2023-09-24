@@ -4,4 +4,5 @@ abstract class AppAssets {
   static String rainy = 'assets/images/rainy.png';
   static String snow = 'assets/images/snow.png';
   static String thunderstorm = 'assets/images/thunderstorm.png';
+  static String weatherIcon = 'assets/images/weather icon.png';
 }
