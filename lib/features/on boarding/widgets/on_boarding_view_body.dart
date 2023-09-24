@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:weather/core/utils/app_assets.dart';
-import 'package:weather/core/utils/app_routes.dart';
 import 'package:weather/core/utils/app_text_style.dart';
 
 import '../../../core/utils/app_colors.dart';
+import 'custom_elevated_btn.dart';
 
 class OnBoardingViewBody extends StatelessWidget {
   const OnBoardingViewBody({
@@ -34,30 +33,14 @@ class OnBoardingViewBody extends StatelessWidget {
           ),
           Text(
             'ForeCasts',
-            style: AppTexStyle.textStyleKawa64
-                .copyWith(color: AppColors.startedButton),
+            style: AppTexStyle.textStyleKawa64.copyWith(
+                color: AppColors.startedButton, fontWeight: FontWeight.w500),
             textAlign: TextAlign.center,
           ),
           const SizedBox(
             height: 35,
           ),
-          SizedBox(
-            height: 60,
-            width: 310,
-            child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: AppColors.startedButton,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(32))),
-                onPressed: () {
-                  GoRouter.of(context).pushReplacement(AppRoutes.kHomeView);
-                },
-                child: Text(
-                  'Get Start',
-                  style: AppTexStyle.textStyleKawa24
-                      .copyWith(color: AppColors.startGradiantColor),
-                )),
-          ),
+          const CustomElevatedBtn(),
         ],
       ),
     );
