@@ -9,29 +9,36 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Column(
-        children: [
-          ColoredPart(),
-          Spacer(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              DetailedInfo(infoName: 'wind', num: '191'),
-              DetailedInfo(infoName: 'wind', num: '191'),
-              DetailedInfo(infoName: 'wind', num: '191'),
-            ],
-          ),
-          Spacer(),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              DetailedInfo(infoName: 'wind', num: '191'),
-              DetailedInfo(infoName: 'wind', num: '191'),
-              DetailedInfo(infoName: 'wind', num: '191'),
-            ],
-          ),
-          Spacer(),
-        ],
+      resizeToAvoidBottomInset: true,
+      body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
+        child: Column(
+          children: [
+            ColoredPart(),
+            SizedBox(
+              height: 15,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                DetailedInfo(infoName: 'wind', num: '191'),
+                DetailedInfo(infoName: 'wind', num: '191'),
+                DetailedInfo(infoName: 'wind', num: '191'),
+              ],
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                DetailedInfo(infoName: 'wind', num: '191'),
+                DetailedInfo(infoName: 'wind', num: '191'),
+                DetailedInfo(infoName: 'wind', num: '191'),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

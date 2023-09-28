@@ -9,6 +9,8 @@ class CustomSearchTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      scrollPadding:
+          EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
       onChanged: (value) {},
       onTapOutside: (event) {
         FocusManager.instance.primaryFocus?.unfocus();
